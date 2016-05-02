@@ -1,6 +1,5 @@
 ![TinyLink preview](http://s1.micp.ru/w52P0.jpg)
 
-# TinyLink
 Small and beautiful URL shortening engine built with fully responsive design and REST-like API.
 
 # Contributing
