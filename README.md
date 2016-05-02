@@ -1,7 +1,10 @@
-![TinyLink mini icon](http://s2.micp.ru/T93y9.png)
+![TinyLink preview](http://s1.micp.ru/w52P0.jpg)
 
 # TinyLink
-Small and beautiful URL shortening engine built on PHP. 
+Small and beautiful URL shortening engine built with fully responsive design and REST-like API.
+
+# Contributing
+Anyone and everyone is welcome to [contribute](/CONTRIBUTING.md).
 
 # System Requirements
 For correct system work, on your server must be installed: 
@@ -82,7 +85,6 @@ description and displays only if description is available
 - `[has_pagination] {pagination} [/has_pagination]` - displayed only if there are more then two pages 
 
 # API Subsystem
-This engine also have a simple **REST-like API system**. All responses is in **JSON** format.
 
 To short link, you need to send `POST` request to `http://yoursite.com/api/short` with next parameters: 
 - url - link to short. *String.*
@@ -116,3 +118,5 @@ To short link, you need to send `POST` request to `http://yoursite.com/api/short
 
 To delete shorten link, send `GET` request to `http://yoursite.com/api/delete/<linkAlias>`  
 View all info about shorten link - `GET` request to `http://yoursite.com/api/<linkAlias>`
+
+All responses is in **JSON** format.
