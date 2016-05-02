@@ -1,0 +1,72 @@
+/* ===================================
+ * Author: Nazarkin Roman
+ * -----------------------------------
+ * Contacts:
+ * email - roman@nazarkin.su
+ * icq - 642971062
+ * skype - roman444ik
+ * -----------------------------------
+ * GitHub:
+ * https://github.com/NazarkinRoman
+ * ===================================
+*/
+
+/* палитра https://kuler.adobe.com/#themeID/2356324 */
+
+body, html {
+    background: #fff;
+    overflow                 : hidden;
+    min-width                : 768px;
+}
+
+/* ==========================================================================
+   Top block
+   ========================================================================== */
+
+#l_top_block {
+    width         : 100%;
+    height        : 60px;
+    padding       : 5px;
+    background    : #f2f2f2;
+    border-bottom : 5px solid #e8e8e8;
+    text-align    : center;
+}
+
+#l_top_block .button {
+    display         : inline-block;
+    background      : #fff;
+    padding         : 10px 15px;
+    color           : #383838;
+    text-decoration : none;
+    margin          : 7px 15px 0 15px;
+}
+
+#l_top_block .logo {
+    color           : #383838;
+    font-size       : 35px;
+    font-family     : 'Roboto', sans-serif;
+    font-weight     : 300;
+    text-decoration : none;
+    margin-top      : 15px;
+    float           : left;
+}
+
+/* ==========================================================================
+   iFrame
+   ========================================================================== */
+
+#main_frame {
+    width   : 100%;
+    border  : none;
+    margin  : 0;
+    padding : 0;
+    z-index : 999999;
+}
+
+/* ==========================================================================
+   Password protection
+   ========================================================================== */
+
+.password_protect {
+    height: 100%;
+}

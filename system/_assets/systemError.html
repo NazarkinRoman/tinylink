@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Error</title>
+</head>
+<body>
+
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Monda&subset=latin,latin-ext);
+
+    body { width : 650px; margin : -5px auto 0 auto; border : 1px dashed #ccc; padding : 10px; border-radius : 5px; }
+
+    h1 { font-size : 20px; color : red; margin : 15px 0; font-family : 'Monda', sans-serif; }
+
+    .error_body { font-size : 17px; }
+
+    .error_body div { margin-bottom : 10px; }
+
+    .error_body div b { display : block }
+</style>
+
+<h1>Fatal system error</h1>
+
+<div class="error_body">
+    <div><b>Error message:</b> {exceptionClass}: {errorMessage}</div>
+    <div><b>Stack trace:</b> {trace}</div>
+</div>
+
+
+</body>
+</html>

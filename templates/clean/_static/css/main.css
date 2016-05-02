@@ -1,0 +1,516 @@
+/* ===================================
+ * Author: Nazarkin Roman
+ * -----------------------------------
+ * Contacts:
+ * email - roman@nazarkin.su
+ * icq - 642971062
+ * skype - roman444ik
+ * -----------------------------------
+ * GitHub:
+ * https://github.com/NazarkinRoman
+ * ===================================
+*/
+@import url('normalize.css');
+@import url('animations.css');
+@import url('core_ui_select.css');
+@import url('http://fonts.googleapis.com/css?family=Roboto:300,100');
+
+/* палитра https://kuler.adobe.com/#themeID/2356324 */
+
+body, html {
+    background-color         : #b4e0e8;
+    /* font settings */
+    font-family              : 'Segoe UI', 'Tahoma', Arial, Verdana, sans-serif;
+    font-weight              : 300;
+    font-size                : 15px;
+    line-height              : 1.8em;
+    color                    : #383838;
+    overflow-x               : hidden;
+    -webkit-text-size-adjust : none
+}
+
+.clr:after {
+    content     : '.';
+    display     : block;
+    clear       : both;
+    visibility  : hidden;
+    line-height : 0;
+    height      : 0;
+}
+
+.big_button {
+    display         : inline-block;
+    background      : #f2f2f2;
+    padding         : 10px 15px;
+    margin-left     : 5px;
+    color           : #383838;
+    text-decoration : none;
+}
+
+.big_button:hover {
+    background : #e8e8e8;
+}
+
+.error {
+    background : #f20505 !important;
+    color      : #fff !important;
+}
+
+.hide {
+    display : none;
+}
+
+a {
+    color : #7d7d7d
+}
+
+a:hover {
+    text-decoration : none;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    width : 100%;
+}
+
+table thead td {
+    background : #e8e8e8;
+}
+
+table td {
+    min-width     : 60%;
+    padding       : 10px;
+    border-right  : 1px solid #e8e8e8;
+    border-bottom : 1px solid #e8e8e8;
+    /*word-break    : break-all;*/
+}
+
+table td.small {
+    min-width : 20%;
+}
+
+table tbody tr:hover td {
+    background   : #f2f2f2;
+    border-color : #f2f2f2;
+}
+
+table tbody tr :last-child {
+    border-right : 0;
+}
+
+/* ==========================================================================
+   Flash messages
+   ========================================================================== */
+
+.flash_message {
+    position                          : fixed;
+    top                               : 20px;
+    right                             : 20px;
+    width                             : 200px;
+    padding                           : 10px;
+    background                        : #f2f2f2;
+    color                             : #383838;
+
+    /* animations */
+    -webkit-animation-duration        : 1s;
+    animation-duration                : 1s;
+    -moz-animation-duration           : 1s;
+    -webkit-animation-iteration-count : 1;
+    animation-iteration-count         : 1;
+    -moz-animation-iteration-count    : 1;
+    -webkit-animation-delay           : 1s;
+    animation-delay                   : 1s;
+    -moz-animation-delay              : 1s;
+}
+
+.flash_message ul {
+    list-style : none;
+    margin     : 0;
+    padding    : 0;
+}
+
+.flash_message ul li {
+    display       : block;
+    margin-bottom : 5px;
+}
+
+.flash_message ul li:last-child {
+    margin-bottom : 0;
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.l_logo {
+    margin-top : 150px;
+    text-align : center;
+}
+
+.l_logo a {
+    color           : #383838;
+    font-size       : 70px;
+    font-family     : 'Roboto', sans-serif;
+    font-weight     : 100;
+    text-decoration : none;
+}
+
+/* ==========================================================================
+   Main Wrap
+   ========================================================================== */
+
+.l_wrap {
+    width                             : 700px;
+    margin                            : 100px auto 25px;
+    background                        : #fff;
+    position                          : relative;
+
+    /* animations */
+    -webkit-animation-duration        : .5s;
+    animation-duration                : .5s;
+    -moz-animation-duration           : .5s;
+    -webkit-animation-iteration-count : 1;
+    animation-iteration-count         : 1;
+    -moz-animation-iteration-count    : 1;
+}
+
+.l_wrap.wrap_btn {
+    display: none;
+    margin-top: 15px;
+}
+
+.l_wrap.wrap_btn.index_index { display: block; }
+
+.l_wrap.wrap_btn a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+}
+.l_wrap.wrap_btn a:hover { background-color: #f2f2f2; }
+
+.l_wrap.links_my {
+    width : 1000px;
+}
+
+.l_wrap .content {
+    padding    : 10px;
+    border-top : 5px solid #e8e8e8;
+    position   : relative;
+}
+
+.l_wrap .content.admin {
+    border-top: 0;
+}
+
+/* ==========================================================================
+   Inputs & Buttons
+   ========================================================================== */
+
+.l_main {
+    padding    : 10px;
+    border     : 0;
+    outline    : none;
+    height     : 50px;
+    box-sizing : border-box;
+}
+
+.l_standard {
+    padding    : 0 10px;
+    margin     : 10px 0;
+    border     : 1px solid #e8e8e8;
+    outline    : none;
+    height     : 30px;
+    width      : 100%;
+    box-sizing : border-box;
+}
+
+select.l_standard {
+    padding : 3px;
+}
+
+/* split line in forms */
+form .split_line {
+    position: relative;
+    margin: 20px 0 15px 0;
+    height: 3px;
+    border-bottom: 3px solid #e8e8e8;
+}
+
+form .split_line span {
+    color: #7d7d7d;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: #fff;
+    padding-left: 5px;
+}
+
+/* bordered inputs */
+.bordered_input {
+    top      : -5px;
+    position : relative;
+    display  : inline-block;
+}
+
+.password_wrap.admin .bordered_input {
+    float : right;
+}
+
+.bordered_input > * {
+    border-bottom : 0;
+}
+
+.bordered_input:after {
+    content    : '';
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    height     : 3px;
+    background : #e8e8e8;
+}
+
+.l_main.button {
+    background : #f2f2f2;
+    font-size  : 20px;
+}
+
+.l_main.button:hover, .l_main.button.hover {
+    background : #e8e8e8;
+}
+
+.l_input_group .l_main.input {
+    float : left;
+    width : 80%;
+}
+
+.l_input_group .l_main.button {
+    float : left;
+    width : 10%;
+}
+
+.l_input_group.compact .l_main.input {
+    width : 90%;
+}
+
+/* Static Placeholder */
+
+.staticPlaceholder {
+    position : relative;
+    padding  : 0 10px;
+    color    : #afafaf;
+    width    : 100%;
+    display  : table;
+}
+
+.staticPlaceholder .l_error {
+    left : -1px;
+}
+
+.staticPlaceholder > DIV {
+    display : table-cell;
+}
+
+.staticPlaceholder > DIV:first-child {
+    width : 1px;
+}
+
+.staticPlaceholder input {
+    box-sizing : border-box;
+    border     : 0;
+    outline    : 0;
+    padding    : 0;
+    width      : 100%;
+}
+
+/* Input errors */
+
+.l_hint {
+    color                             : #383838;
+    position                          : absolute;
+    top                               : -35px;
+    height                            : 27px;
+    left                              : 0;
+    width                             : 150px;
+    padding                           : 4px 8px;
+    z-index                           : 20;
+    background                        : #e8e8e8;
+    margin                            : 0 auto;
+    text-align                        : center;
+
+    /* disable text select */
+    -webkit-touch-callout             : none;
+    -webkit-user-select               : none;
+    -khtml-user-select                : none;
+    -moz-user-select                  : none;
+    -ms-user-select                   : none;
+    user-select                       : none;
+
+    /* animations */
+    -webkit-animation-duration        : .5s;
+    animation-duration                : .5s;
+    -moz-animation-duration           : .5s;
+    -webkit-animation-iteration-count : 1;
+    animation-iteration-count         : 1;
+    -moz-animation-iteration-count    : 1;
+}
+
+.l_hint:after, .l_hint:before {
+    top            : 100%;
+    border         : solid transparent;
+    content        : " ";
+    height         : 0;
+    width          : 0;
+    position       : absolute;
+    pointer-events : none;
+}
+
+.l_hint:after {
+    border-top-color : #e8e8e8;
+    border-width     : 10px;
+    left             : 30px;
+    margin-left      : -10px;
+}
+
+.l_hint:before {
+    border-width : 11px;
+    left         : 30px;
+    margin-left  : -11px;
+}
+
+.l_hint.error:after {
+    border-top-color : #f20505;
+}
+
+/* ==========================================================================
+   Cols & Tabs
+   ========================================================================== */
+
+.l_col {
+    float  : left;
+    width  : 30%;
+    margin : 0 1.5%;
+}
+
+.l_col.big_col {
+    width: 45%;
+    margin: 0 2%;
+}
+
+.l_col h6.pad_bottom {
+    margin-bottom: 10px;
+}
+
+.l_col h6 {
+    font-size   : 20px;
+    font-family : 'Roboto', sans-serif;
+    font-weight : normal;
+}
+
+/* ==========================================================================
+   Link page
+   ========================================================================== */
+
+#site_screenshot {
+    margin-right  : 5px;
+    margin-bottom : 5px;
+
+    border        : 1px solid #e8e8e8;
+    float         : left;
+    width         : 200px;
+}
+
+.site_info {
+    font-size   : 90%;
+    line-height : 150%;
+}
+
+.site_info div {
+    margin : 10px 0;
+}
+
+i.descr_not_available {
+    font-style : italic;
+    color      : #383838;
+}
+
+/* action buttons */
+.l_wrap .content .button_container {
+    position   : absolute;
+    bottom     : 10px;
+    right      : 10px;
+    float      : right;
+    text-align : right;
+}
+
+.button_container .big_button.deletelink {
+    text-align : center;
+}
+
+/* ==========================================================================
+   Password protected links
+   ========================================================================== */
+
+.password_protect {
+    height   : 120px;
+    position : relative;
+}
+
+.password_protect.admin {
+    height : 150px;
+}
+
+.password_wrap {
+    position   : absolute;
+    top        : 50%;
+    margin-top : -15px;
+    height     : 30px;
+    width      : 100%;
+    text-align : center;
+}
+
+.password_wrap.admin {
+    position   : inherit;
+    top        : 25%;
+    margin     : 30px auto;
+    height     : auto;
+    width      : 300px;
+    text-align : left;
+}
+
+.password_wrap .l_standard {
+    width  : auto;
+    margin : 0;
+}
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+    margin-top : 15px;
+    text-align : center;
+}
+
+.pagination .big_button {
+    margin     : 0 5px;
+    background : #dcdcdc;
+}
+
+.pagination .big_button.inactive {
+    background : #f2f2f2;
+}
+
+.pagination .prev, .pagination .next {
+    float  : left;
+    margin : 0;
+}
+
+.pagination .next {
+    float : right;
+}

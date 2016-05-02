@@ -1,0 +1,155 @@
+/* ===================================
+ * Author: Nazarkin Roman
+ * -----------------------------------
+ * Contacts:
+ * email - roman@nazarkin.su
+ * icq - 642971062
+ * skype - roman444ik
+ * -----------------------------------
+ * GitHub:
+ * https://github.com/NazarkinRoman
+ * ===================================
+*/
+
+.b-core-ui-select {
+    position            : relative;
+    width               : 100%;
+    padding             : 1px 10px 0;
+    margin              : 10px 0;
+    border              : 1px solid #e8e8e8;
+    outline             : none;
+    cursor              : default;
+    box-sizing          : border-box;
+
+    -webkit-user-select : none;
+    -moz-user-select    : none;
+    -ms-user-select     : none;
+    -o-user-select      : none;
+    user-select         : none;
+
+}
+
+.b-core-ui-select__select {
+    position    : static;
+    width       : 100%;
+    padding     : 10px;
+    font-size   : 12px;
+    line-height : 18px;
+}
+
+.b-core-ui-select__value {
+    display       : block;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    padding-right : 25px;
+}
+
+.b-core-ui-select__select_state_hide {
+    height      : 1px !important;
+    margin      : 0;
+    padding     : 0;
+    position    : absolute;
+    width       : 1px !important;
+    text-indent : -9999px;
+    overflow    : hidden;
+    opacity     : 0;
+    z-index     : -1;
+    filter      : alpha(opacity=0);
+}
+
+.b-core-ui-select:HOVER {
+    color            : #333;
+    background-color : #f2f2f2;
+}
+
+.b-core-ui-select.disabled,
+.b-core-ui-select.disabled:ACTIVE {
+    opacity             : .5;
+    color               : #333;
+    background-color    : #e6e6e6;
+    background-position : 0 -15px;
+    transition          : background-position 0.1s linear;
+}
+
+.b-core-ui-select__button {
+    position     : absolute;
+    right        : 15px;
+    top          : 5px;
+    display      : block;
+    width        : 0;
+    height       : 0;
+    border-top   : 5px solid black;
+    border-right : 5px solid transparent;
+    border-left  : 5px solid transparent;
+    content      : "";
+    margin-top   : 8px;
+    margin-left  : 2px;
+}
+
+.b-core-ui-select__dropdown {
+    display    : none;
+    position   : absolute;
+    top        : 0;
+    margin-top : -21px;
+    padding    : 0;
+    max-height : 200px;
+    font-size  : 12px;
+    border     : 1px solid #e8e8e8;
+    background : #fff;
+}
+
+.b-core-ui-select__dropdown.hide {
+    display : none;
+}
+
+.b-core-ui-select__dropdown.show {
+    display : block;
+}
+
+.b-core-ui-select__dropdown__wrap {
+    max-height : 200px;
+    overflow   : auto;
+    outline    : none;
+}
+
+.j-scroll-pane .b-core-ui-select__dropdown__item {
+    margin-right : 20px;
+}
+
+.b-core-ui-select__dropdown__list {
+    overflow : hidden;
+    margin   : 0 !important;
+    padding  : 0;
+}
+
+.b-core-ui-select__dropdown__item {
+    padding         : 5px 10px;
+    min-height      : 18px;
+    list-style-type : none;
+    cursor          : pointer;
+}
+
+.b-core-ui-select__dropdown__label {
+    padding         : 10px;
+    min-height      : 18px;
+    font-style      : italic;
+    list-style-type : none;
+    border-bottom   : 1px solid #ccc;
+}
+
+.b-core-ui-select__dropdown__item.disabled,
+.b-core-ui-select__dropdown__item.disabled:HOVER {
+    color      : #ccc;
+    background : none;
+}
+
+.b-core-ui-select__dropdown__item.selected,
+.b-core-ui-select__dropdown__item.selected:HOVER {
+    background : #e8e8e8;
+    color      : #000;
+}
+
+.b-core-ui-select__dropdown__item:HOVER {
+    background : #f2f2f2;
+}

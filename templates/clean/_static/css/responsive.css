@@ -1,0 +1,160 @@
+/* ===================================
+ * Author: Nazarkin Roman
+ * -----------------------------------
+ * Contacts:
+ * email - roman@nazarkin.su
+ * icq - 642971062
+ * skype - roman444ik
+ * -----------------------------------
+ * GitHub:
+ * https://github.com/NazarkinRoman
+ * ===================================
+*/
+
+/* #Mobile (Portrait)
+================================================== */
+@media only screen and (max-width: 767px) {
+
+    .l_wrap {
+        /* wrap width */
+        width : 90% !important;
+        margin-top : 50px;
+    }
+
+    .l_logo {
+        margin-top : 50px;
+    }
+
+    .l_col {
+        /* param columns */
+        width         : 100%;
+        margin        : 0 0 10px;
+        border-bottom : 5px solid #e8e8e8;
+    }
+
+    .admin .l_col {
+        border-bottom: 0;
+    }
+
+    #config_params {
+        display : block;
+    }
+
+    /* input & buttons */
+    .l_input_group .l_main.input {
+        width : 60%;
+    }
+
+    .l_input_group.compact .l_main.input {
+        width: 80%;
+    }
+
+    .l_input_group .l_main.button {
+        width : 20%;
+    }
+
+    /* tables */
+
+    table td.canhide {
+        display: none;
+    }
+}
+
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* logo margin */
+    .l_wrap {
+        margin-top : 75px;
+    }
+
+    .l_logo {
+        margin-top : 75px;
+    }
+
+    /* input & buttons */
+    .l_input_group .l_main.input {
+        width : 70%;
+    }
+
+    .l_input_group.compact .l_main.input {
+        width: 85%;
+    }
+
+    .l_input_group .l_main.button {
+        width : 15%;
+    }
+}
+
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .l_wrap {
+        margin-top : 10%;
+    }
+
+    .l_logo {
+        margin-top : 30%;
+    }
+}
+
+/* #Custom (for link page)
+================================================== */
+@media only screen and (max-width: 480px) {
+
+    /* link page */
+    #site_screenshot, .site_info {
+        float : none;
+        width : 100%;
+    }
+
+    .l_wrap .content .button_container {
+        position   : static;
+        display    : block;
+        margin-top : 15px;
+        width      : 100%;
+    }
+
+    .l_wrap .content .button_container .action_button {
+        width      : 80%;
+        box-sizing : border-box;
+        margin     : 0;
+    }
+
+    .l_wrap .content .button_container .action_button.deletelink {
+        width       : 15%;
+        margin-left : 3%;
+    }
+
+}
+
+/* #Custom 2(for `my links` page)
+================================================== */
+@media only screen and (max-width: 1050px) {
+
+    .l_wrap.links_my {
+        /* wrap width */
+        width : 90% !important;
+        margin-top : 50px;
+    }
+
+    .l_logo.links_my {
+        margin-top : 50px;
+    }
+
+    table td {
+        padding: 5px;
+    }
+
+    table td.small {
+        min-width: 110px;
+    }
+
+    /* pagination */
+
+    .pagination .big_button {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+}

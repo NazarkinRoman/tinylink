@@ -1,0 +1,62 @@
+# ===================================
+# Author: Nazarkin Roman
+# -----------------------------------
+# Contacts:
+# email - roman@nazarkin.su
+# icq - 642971062
+# skype - roman444ik
+# -----------------------------------
+# GitHub:
+# https://github.com/NazarkinRoman
+# ===================================
+
+
+# ------------------------------------------------------------------------------
+# | Apache options                                                             |
+# ------------------------------------------------------------------------------
+DirectoryIndex index.php
+AddDefaultCharset utf8
+Options All -Indexes
+
+# ------------------------------------------------------------------------------
+# | Security                                                                   |
+# ------------------------------------------------------------------------------
+<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh|db|cache)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# | Rewrite                                                                    |
+# ------------------------------------------------------------------------------
+RewriteEngine On
+
+# static pages
+RewriteRule ^page/([^.]+)\.html$ index.php?controller=index&action=static&pageAlias=$1 [L]
+
+# rewrite links module
+RewriteRule ^([a-zA-Z0-9]+[a-zA-Z0-9_]+[a-zA-Z0-9]+)\+(/?)+$ index.php?controller=links&action=view&linkId=$1 [L]
+RewriteRule ^api/([a-zA-Z0-9]+[a-zA-Z0-9_]+[a-zA-Z0-9]+)\+(/?)+$ index.php?controller=links&action=view&isapi=true&linkId=$1 [L]
+
+RewriteRule ^delete/([a-zA-Z0-9]+[a-zA-Z0-9_]+[a-zA-Z0-9]+)(/?)+$ index.php?controller=links&action=delete&linkId=$1 [L]
+RewriteRule ^api/delete/([a-zA-Z0-9]+[a-zA-Z0-9_]+[a-zA-Z0-9]+)(/?)+$ index.php?controller=links&action=delete&isapi=true&linkId=$1 [L]
+
+# system modules
+RewriteRule ^my(/?)+$ index.php?controller=links&action=my [L]
+RewriteRule ^my/([0-9]+)(/?)+$ index.php?controller=links&action=my&page=$1 [L]
+RewriteRule ^short(/?)+$ index.php?controller=index&action=short [L]
+RewriteRule ^api/short(/?)+$ index.php?controller=index&action=short&isapi=true [L]
+
+# admin panel
+RewriteRule ^admin(/?)+$ index.php?controller=admin [L]
+RewriteRule ^admin/page_delete/([a-zA-Z0-9_]+)(/?)+$ index.php?controller=admin&action=page_delete&pageAlias=$1 [L]
+RewriteRule ^admin/page_add/([a-zA-Z0-9_]+)(/?)+$ index.php?controller=admin&action=page_add&pageAlias=$1 [L]
+RewriteRule ^admin/([0-9]+)(/?)+$ index.php?controller=admin&page=$1 [L]
+RewriteRule ^admin/([a-zA-Z0-9_]+)(/?)+$ index.php?controller=admin&action=$1 [L]
+
+# `go to url`
+RewriteRule ^([a-zA-Z0-9]+[a-zA-Z0-9_]+[a-zA-Z0-9]+)(/?)+$ index.php?controller=links&action=go&linkId=$1 [L]
+
+# other rules
+# RewriteRule ^([a-z]+)/([a-z]+)(/?)+$ index.php?controller=$1&action=$2 [QSA,L]
+# RewriteRule ^([a-z]+)(/?)+$ index.php?controller=$1 [QSA,L]
