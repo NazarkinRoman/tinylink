@@ -12,6 +12,7 @@ For correct system work, on your server must be installed:
 Copy all system files to your server through FTP or from Control Panel of your hosting provider and go to admin panel(http://yoursite.com/admin), log in with this data: 
 - login: **admin**
 - password: **123**
+
 then, go to the page - http://yoursite.com/admin/settings and change settings to yours. **System installed!** All the rest will do script program, there is nothing else necessary from you. 
 
 # Customization
